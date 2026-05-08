@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div className="bg-black min-h-screen text-white">
       {/* HERO */}
-      <section className="flex flex-col items-center justify-center h-screen text-center px-4">
+      <section className="flex flex-col items-center justify-center min-h-screen text-center px-4">
         <h1 className="text-6xl font-bold text-yellow-400 mb-6">
           BUDS & LEAVES
         </h1>
