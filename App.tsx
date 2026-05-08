@@ -23,44 +23,37 @@ export default function App() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <header className="p-6 border-b border-yellow-500">
-        <h1 className="text-3xl font-bold text-yellow-500">
+    <div className="bg-black min-h-screen text-white">
+      {/* HERO */}
+      <section className="flex flex-col items-center justify-center h-screen text-center px-4">
+        <h1 className="text-6xl font-bold text-yellow-400 mb-6">
           BUDS & LEAVES
         </h1>
-      </header>
 
-      <section
-        className="h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/branding/buds-and-leaves-storefront.png')",
-        }}
-      >
-        <div className="bg-black/70 p-10 rounded-3xl text-center">
-          <h2 className="text-5xl font-bold mb-4">
-            Luxury Denim Collection
-          </h2>
-
-          <p className="text-gray-300">
-            Premium modern denim fashion.
-          </p>
-        </div>
+        <p className="text-xl text-gray-300">
+          Luxury Denim Fashion Website
+        </p>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* PRODUCTS */}
+      <section className="px-8 py-20 bg-zinc-950">
+        <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          OUR PRODUCTS
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-700"
+              className="bg-zinc-900 rounded-2xl overflow-hidden shadow-lg border border-zinc-800"
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-[420px] object-contain bg-black p-4"
+                className="w-full h-[420px] object-cover"
               />
 
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {product.name}
                 </h3>
@@ -69,7 +62,7 @@ export default function App() {
                   href={product.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-yellow-500 text-black px-6 py-3 rounded-xl inline-block font-semibold"
+                  className="bg-yellow-400 text-black px-6 py-3 rounded-xl inline-block font-bold hover:scale-105 transition"
                 >
                   View Product
                 </a>
